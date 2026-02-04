@@ -20,4 +20,4 @@ def chat_view(request):
                        'user' : request.user
                        }
             return render(request, 'a_rtchat/partials/chat_message_p.html', context) # Redirect to avoid resubmission
-    return render(request, 'a_rtchat/templates/a_rtchat/chat.html', { 'chat_messages': chat_messages, 'form': form })
+    return render(request, 'a_rtchat/chat.html', { 'chat_messages': chat_messages, 'form': form })
