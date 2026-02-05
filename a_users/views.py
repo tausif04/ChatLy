@@ -99,7 +99,7 @@ def profile_usernamechange(request):
             messages.success(request, 'Username updated successfully.')
             return redirect('profile-settings')
         else:
-            messages.warning(request, 'Username not valid or already in use')
+            messages.warning(request, 'Username not valid or already in use') 
             return redirect('profile-settings')
     
     return redirect('profile-settings')    
