@@ -11,7 +11,7 @@ def chat_view(request):
 
     if request.htmx:
         form = ChatMessageCreateForm(request.POST)
-        if form.is_valid():
+        if form.is_valid():   
             new_message = form.save(commit=False)
             new_message.author = request.user
             new_message.group = chat_group

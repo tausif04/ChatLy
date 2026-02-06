@@ -16,7 +16,9 @@
 <li>
     <div class="flex justify-start">
         <div class="flex items-end mr-2">
+            {% if message.author.is_authenticated %}
             <a href="{% url 'profile' message.author.username %}">
+                {% endif %}
                 <img class="w-8 h-8 rounded-full object-cover" src="{{ message.author.profile.avatar }}" , alt>
             </a>
         </div>
