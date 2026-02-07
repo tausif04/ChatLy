@@ -1,7 +1,7 @@
 from django.shortcuts import redirect, render, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .models import *
-from .forms import *
+from .forms import  ChatMessageCreateForm
 
 @login_required
 def chat_view(request):
@@ -9,7 +9,7 @@ def chat_view(request):
     chat_messages = chat_group.chat_message.all()[:30]
     form = ChatMessageCreateForm()
 
-    if request.htmx:
+    if request.method == "POST" and request.htmx:
         form = ChatMessageCreateForm(request.POST)
         if form.is_valid():   
             new_message = form.save(commit=False)
