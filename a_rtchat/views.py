@@ -16,8 +16,9 @@ def chat_view(request):
             new_message.author = request.user
             new_message.group = chat_group
             new_message.save()
-            context = {'chat_message': new_message,
-                       'user' : request.user
-                       }
-            return render(request, 'a_rtchat/partials/chat_message_p.html', context) # Redirect to avoid resubmission
+            context = {
+            'message': new_message,
+            'user': request.user
+        }
+        return render(request, 'a_rtchat/partials/chat_message_p.html', context) # # Redirect to avoid resubmission
     return render(request, 'a_rtchat/chat.html', { 'chat_messages': chat_messages, 'form': form })
