@@ -1,4 +1,4 @@
-💬 Real-Time Chat Application (Django + HTMX + Channels)
+💬 Real-Time Chat Application (Django + HTMX + Channels + Web-Socket )
 
 A real-time chat application built using Django, Django Channels, HTMX, and Tailwind CSS.
 Supports dynamic message updates without full page reload.
