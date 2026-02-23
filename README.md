@@ -3,6 +3,7 @@
 A real-time chat application built using Django, Django Channels, HTMX, and Tailwind CSS.
 Supports dynamic message updates without full page reload.
 
+
 🚀 Features
 
 ✅ Real-time messaging (WebSocket)
@@ -20,6 +21,7 @@ Supports dynamic message updates without full page reload.
 ✅ Auto-scroll to latest message
 
 ✅ HTMX partial rendering (no page reload)
+
 
 🛠 Tech Stack
 
